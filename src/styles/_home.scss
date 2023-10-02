@@ -1,0 +1,144 @@
+.home{
+    height: 100vh;
+    align-items: center;
+     display: flex;
+    justify-content: 'center';
+    background-image: url('../mainComponent/images/group-university-students-asian-sitting-green-grass-w-working-reading-outside-together-park-112322588.jpg');
+background-size: cover;
+
+}
+.secti{
+  background-color: rgb(61, 32, 32);
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+ 
+
+}
+.footer-hover{
+  padding-top: 32px;
+}
+#nnav{
+    position: fixed;
+    
+}
+.p-tag{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.p-tagg{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.paragraph-sect{
+    background-color: rgb(160, 149, 149);
+    aspect-ratio: 3/2; 
+    object-fit: contain;
+    margin-top: 20px;
+}
+.containe {
+    position: relative;
+    overflow: hidden;
+
+  }
+  
+  .slide-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../mainComponent/images/group-university-students-asian-sitting-green-grass-w-working-reading-outside-together-park-112322588.jpg");
+    background-size: cover;
+    animation: slide 20s linear infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .qui-imag{
+    width: 100px;
+  }
+  .qui-ima{
+    width: 50%;
+  }
+  .options{
+    background-color: rgb(47,178,172);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 30px;
+  }
+  .mddd{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .midd-d{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .midd-dd{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  .midd-dd button{
+background-color: white;
+  }
+  .midd-dg{
+    background-color: rgb(47,178,172);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: left;
+    border-radius: 20px;
+  }
+  .dialy-pla{
+    padding-left: 80px;
+  }
+  .Play-Like-King{
+    padding-left: 20px;
+  }
+  .comple{
+    background-color: white;
+  }
+  .comple{
+    border-radius: 20px;
+  }
+  .bb button{
+    border: none;
+    color: white;
+  }
+  .bbc button{
+    background-color: rgb(47,178,172);
+    border: none;
+    color: white;
+  }
+  .bbd button{
+    border: none;
+    color: white;
+    background-color: white;
+  }
+  #nnav-b{
+    background-color: rgb(47,178,172);
+  }
+  
+@media (max-width: 768px) {
+  .options{
+      padding: 20px;
+  }
+} 
+  
