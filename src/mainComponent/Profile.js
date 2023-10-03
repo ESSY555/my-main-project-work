@@ -63,6 +63,7 @@ export default function Profile() {
    <ul className='browser-defaullt' id="">
    <li>The quiz has a duration of 12 minutes and ends as soon as your time elapses.</li>
    <li>Each Quiz consists of 4 options.</li>
+   <li>Each question is worth 5 marks, and the total score achievable is 100 marks.</li>
    <li>Select the options which best answers the questions by clicking(or selecting) it.</li>
    <li>Ensure you submit your work once you are done/through.</li>
    <li className='long-p'>If you are unable to submit before the time runs out, your work will be 
