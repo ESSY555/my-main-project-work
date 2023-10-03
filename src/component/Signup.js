@@ -1,11 +1,12 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useNavigation, } from "react-router-dom";
 import appp from "../Firebase";
 
 
 export default function Signup() {
 
+  const navigate = useNavigate()
   const auth = getAuth(appp);
 
   const [email, setEmail] = useState("");
@@ -17,9 +18,11 @@ export default function Signup() {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
+        navigate('/SignIn');
         alert("Successfully created an account");
         localStorage.setItem('userName', userName); // Save user name in local storage
         // ...
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -30,7 +33,7 @@ export default function Signup() {
   return (
     <div className="main-signup d-flex justify-content-center">
       <div className="sign-up p-5 pb-3">
-      <h1 className="text-center">SIGN UP</h1>
+        <h1 className="text-center">SIGN UP</h1>
         <div className="pb-3">
           <input type="email" className="form-control" placeholder='Please enter your email' onChange={(e) => setEmail(e.target.value)} />
         </div>
@@ -41,7 +44,7 @@ export default function Signup() {
           <input type="text" className="form-control" placeholder='Please enter username' required onChange={(e) => setUserName(e.target.value)} />
         </div>
         <div className="text-center">
-        <button className=" btn btn-light mb-3" onClick={signUp}>Create Account</button>
+          <button className=" btn btn-light mb-3" onClick={signUp}>Create Account</button>
         </div>
         <div>
           <p className="already-have-acc">

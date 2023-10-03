@@ -1,10 +1,11 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import app from "../Firebase";
 
 export default function SignIn() {
   const auth = getAuth(app);
+  const navigate = useNavigate()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +19,7 @@ export default function SignIn() {
       const userName = user.displayName; // Retrieve the user's display name
 
       // Redirect to the profile page and pass the user's name as a query parameter
-      window.location.href = `/profile?name=${userName}`;
+      navigate(`/profile?name=${userName}`);
     } catch (error) {
       console.log('Login error: ', error);
       setErrorMessage("User not found."); // Set the error message
@@ -26,10 +27,10 @@ export default function SignIn() {
   };
 
   return (
-    
+
     <div className="main-div d-flex container-flex justify-content-center pt-5 pb-5 ">
       <div className="sign-in p-5 text-light">
-      <h1 className="text-center">SIGN IN</h1>
+        <h1 className="text-center">SIGN IN</h1>
         {errorMessage && (
           <div className="alert alert-danger" role="alert">
             {errorMessage}
@@ -63,7 +64,7 @@ export default function SignIn() {
           Don't have an account yet? <Link className="text-suc" to="/Signup">Signup</Link>
         </div>
       </div>
-      
+
     </div>
   );
 }
